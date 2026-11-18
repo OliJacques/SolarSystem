@@ -12,7 +12,7 @@ namespace SolarSystem
             bool menuActive = true;
             do
             {
-                string action = solarSystem.DisplayMenu();
+                string action = Utils.DisplayMenu();
 
                 switch (action)
                 {
@@ -30,6 +30,18 @@ namespace SolarSystem
                         break;
                     case "5":
                         solarSystem.FindPlanet();
+                        break;
+                    case "6":
+                        solarSystem.DisplayPlanetsInOrder("alphabetical");
+                        break;
+                    case "7":
+                        solarSystem.DisplayPlanetsInOrder("distanceFromSun");
+                        break;
+                    case "8":
+                        solarSystem.FetchPlanetWithMostMoons();
+                        break;
+                    case "9":
+                        solarSystem.TotalMoonCount();
                         break;
                     case "0":
                         menuActive = false;
